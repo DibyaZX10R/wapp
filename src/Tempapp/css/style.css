@@ -1,0 +1,85 @@
+/* Styling for the weather box */
+.weather-box {
+    width: 336px;
+    height: 280px;
+    background-color: rgb(211, 216, 221);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+    margin: 50px auto;
+}
+
+/* Styling for the input field */
+.inputdata {
+    text-align: center;
+}
+
+.inputfield {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Styling for the weather information */
+.info {
+    text-align: center;
+    color: #333;
+}
+
+.location {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.temp_max {
+    font-size: 18px;
+}
+
+/* Styling for the wave animation */
+.wave {
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Animation for the wave */
+@keyframes drift {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-200%) rotate(360deg);
+    }
+}
+
+/* Styling for each wave element */
+.wave.-one {
+    background: linear-gradient(to right, #2196F3, #21CBF3);
+    width: 150px;
+    height: 150px;
+    animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+    background: linear-gradient(to right, #FF9800, #FFC107);
+    width: 200px;
+    height: 200px;
+    animation: drift 6000ms infinite linear;
+}
+
+.wave.-three {
+    background: linear-gradient(to right, #8BC34A, #4CAF50);
+    width: 250px;
+    height: 250px;
+    animation: drift 7000ms infinite linear;
+}
